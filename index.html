@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frases Inspiradoras</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #f0f8ff;
+    }
+    h1 {
+      color: #333;
+    }
+    .quote {
+      font-size: 1.5rem;
+      text-align: center;
+      color: #555;
+      margin: 20px;
+    }
+    .refresh {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .refresh:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Frase do Dia</h1>
+  <div class="quote"></div>
+  <button class="refresh" onclick="showRandomQuote()">Outra Frase</button>
+
+  <script>
+    const quotes = [
+      "O sucesso é ir de fracasso em fracasso sem perder entusiasmo. - Winston Churchill",
+      "Acredite que você pode, assim você já está no meio do caminho. - Theodore Roosevelt",
+      "Tudo o que você pode imaginar é real. - Pablo Picasso",
+      "Não espere. O tempo nunca será justo. - Napoleon Hill",
+      "Você é mais forte do que pensa. - Anônimo"
+    ];
+
+    function showRandomQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      document.querySelector('.quote').textContent = quotes[randomIndex];
+    }
+
+    // Exibe uma frase aleatória ao carregar a página
+    window.onload = showRandomQuote;
+  </script>
+</body>
+</html>

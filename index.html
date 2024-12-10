@@ -1,139 +1,138 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Frases Motivacionais</title>
-  <style>
-    body {
-      display: flex;
-      flex-direction: column; /* Alinha os itens na vertical */
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-    }
-
-    .quote {
-      font-size: 24px;
-      text-align: center;
-      margin-top: 20px; /* Distância entre o logo e a frase */
-    }
-
-    .logo {
-      width: 150px;
-      margin-bottom: 20px; /* Distância entre o logo e a frase */
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frases Inspiradoras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+            flex-direction: column;
+        }
+        .quote {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        img {
+            display: block;
+            margin-bottom: 20px;
+            width: 150px; /* Ajuste o tamanho do logotipo conforme necessário */
+        }
+    </style>
 </head>
 <body>
+    <img src="https://github.com/urbfitness/frases-inspiradoras/raw/main/assets/logo%20certo.png" alt="Logo">
+    <div class="quote"></div>
 
-  <!-- Logo -->
-  <img class="logo" src="https://github.com/urbfitness/frases-inspiradoras/blob/main/assets/logo%20mais%20leve.png?raw=true" alt="Logo">
+    <script>
+        const quotes = [
+            "O sucesso é ir de fracasso em fracasso sem perder entusiasmo. - Winston Churchill",
+            "Acredite que você pode, assim você já está no meio do caminho. - Theodore Roosevelt",
+            "Tudo o que você pode imaginar é real. - Pablo Picasso",
+            "Não espere. O tempo nunca será justo. - Napoleon Hill",
+            "Você é mais forte do que pensa. - Anônimo",
+            "A única maneira de fazer um excelente trabalho é amar o que você faz. - Steve Jobs",
+            "A persistência é o caminho do êxito. - Charles Chaplin",
+            "O maior erro que você pode cometer é o de ficar o tempo todo com medo de cometer algum. - Elbert Hubbard",
+            "O único modo de fazer um grande trabalho é amar o que você faz. - Steve Jobs",
+            "O que não me mata, me fortalece. - Friedrich Nietzsche",
+            "Acredite em si mesmo e todo o resto virá naturalmente. - Elissa Goodman",
+            "Nunca desista. O começo é sempre o mais difícil. - Anônimo",
+            "Se você pode sonhar, você pode realizar. - Walt Disney",
+            "O medo é a principal razão que impede muitas pessoas de alcançarem o sucesso. - Anônimo",
+            "Vá onde se sinta vivo. - Anônimo",
+            "Pense grande e não ouça pessoas que lhe dizem o contrário. - Tim Ferriss",
+            "Nada é impossível. A palavra em si diz 'eu sou possível'. - Audrey Hepburn",
+            "O fracasso é apenas a oportunidade de recomeçar com mais inteligência. - Henry Ford",
+            "Não se preocupe com os fracassos; preocupe-se com as chances que você perde quando nem tenta. - Jack Canfield",
+            "O verdadeiro fracasso é não tentar. - Anônimo",
+            "Acredite em você mesmo e em tudo que você é. Saiba que há algo dentro de você que é maior do que qualquer obstáculo. - Christian D. Larson",
+            "Coragem não é a ausência do medo, mas a capacidade de agir apesar dele. - Anônimo",
+            "O único limite para o nosso amanhã é a nossa dúvida de hoje. - Franklin D. Roosevelt",
+            "Não importa quantas vezes você falhe. O que importa é quantas vezes você se levanta. - Mary Anne Radmacher",
+            "A jornada de mil milhas começa com o primeiro passo. - Lao Tzu",
+            "O sucesso vem de aprender a lidar com as dificuldades que surgem. - Anônimo",
+            "O único lugar onde o sucesso vem antes do trabalho é no dicionário. - Vidal Sassoon",
+            "A única limitação que você tem é a que você impõe a si mesmo. - Anônimo",
+            "Grandes coisas nunca vêm de zonas de conforto. - Anônimo",
+            "Você não precisa ser ótimo para começar, mas precisa começar para ser ótimo. - Zig Ziglar",
+            "As dificuldades preparam pessoas comuns para destinos extraordinários. - C.S. Lewis",
+            "Tudo o que você precisa para alcançar seus objetivos está dentro de você. - Anônimo",
+            "Acredite que você pode e já está no meio do caminho. - Theodore Roosevelt",
+            "Você nunca sabe a força que tem até que sua única alternativa seja ser forte. - Johnny Depp",
+            "A vida é 10% o que acontece com você e 90% como você reage. - Charles R. Swindoll",
+            "Faça da sua vida uma obra-prima. - Anônimo",
+            "Transforme seus sonhos em metas e as suas metas em conquistas. - Anônimo",
+            "Não espere por uma oportunidade. Crie uma. - Anônimo",
+            "A força de vontade é o que nos faz levantar todos os dias e seguir em frente. - Anônimo",
+            "O único limite para o seu sucesso são suas limitações. - Anônimo",
+            "Você tem o poder de mudar a sua vida. - Anônimo",
+            "Acredite no impossível. - Anônimo",
+            "O sucesso não é final, o fracasso não é fatal: é a coragem de continuar que conta. - Winston Churchill",
+            "O futuro pertence àqueles que acreditam na beleza de seus sonhos. - Eleanor Roosevelt",
+            "Se você não lutar pelaquilo que quer, não vai ter aquilo que deseja. - Anônimo",
+            "Nunca é tarde demais para ser o que você poderia ter sido. - George Eliot",
+            "O maior risco é não correr nenhum risco. - Mark Zuckerberg",
+            "Vença o medo e conquiste a liberdade. - Anônimo",
+            "O segredo do sucesso é começar. - Mark Twain",
+            "A única forma de fazer um grande trabalho é amar o que você faz. - Steve Jobs",
+            "O sucesso vem para aqueles que têm coragem de começar. - Anônimo",
+            "A única coisa impossível é aquilo que você não tenta. - Anônimo",
+            "Faça o que você pode, com o que você tem, onde você está. - Theodore Roosevelt",
+            "O sucesso é a soma de pequenos esforços repetidos dia após dia. - Robert Collier",
+            "A melhor maneira de prever o futuro é criá-lo. - Peter Drucker",
+            "Se você quer alcançar a grandeza, pare de pedir permissão. - Anônimo",
+            "Sonhe grande, comece pequeno, mas comece. - Simon Sinek",
+            "As melhores coisas acontecem fora da zona de conforto. - Anônimo",
+            "A maior glória não é nunca cair, mas levantar-se sempre depois de cada queda. - Confúcio",
+            "As pessoas que são bem-sucedidas têm uma coisa em comum: elas nunca desistem. - Anônimo",
+            "Sua atitude determina sua direção. - Anônimo",
+            "Não tenha medo de falhar. Tenha medo de não tentar. - Michael Jordan",
+            "A única coisa que interfere com meu aprendizado é a minha educação. - Albert Einstein",
+            "A vida começa onde sua zona de conforto termina. - Neale Donald Walsch",
+            "O sucesso é a soma de pequenos esforços repetidos dia após dia. - Robert Collier",
+            "O sucesso é a capacidade de ir de fracasso em fracasso sem perder o entusiasmo. - Winston Churchill",
+            "A perseverança é o trabalho duro que você faz depois de se cansar do trabalho duro que já fez. - Newt Gingrich",
+            "O único jeito de fazer um ótimo trabalho é amar o que você faz. - Steve Jobs",
+            "Acredite em você mesmo e todo o resto virá naturalmente. - Elissa Goodman",
+            "Fazer o impossível é o que torna a vida tão empolgante. - Anônimo",
+            "Você nunca será feliz se continuar esperando pela vida perfeita. - Anônimo",
+            "Não se compare com os outros. Apenas melhore a si mesmo. - Anônimo",
+            "A ação é a chave fundamental para todo o sucesso. - Pablo Picasso",
+            "A verdadeira medida de sucesso não é o que você conquista, mas o que você supera. - Anônimo",
+            "O fracasso não é o oposto do sucesso, é parte dele. - Arianna Huffington",
+            "Você só pode crescer se estiver disposto a se sentir desconfortável. - Brian Tracy",
+            "O único limite para o seu sucesso é você. - Anônimo",
+            "O trabalho em equipe divide o trabalho e multiplica os resultados. - Anônimo",
+            "Sonhe grande. Comece pequeno. Aja agora. - Anônimo",
+            "Acredite que você pode e você já está no meio do caminho. - Theodore Roosevelt",
+            "O sucesso é a soma de pequenos esforços repetidos dia após dia. - Robert Collier",
+            "Você tem que ser louco para ser um visionário. - Steve Jobs",
+            "Nunca desista, as grandes coisas levam tempo. - Anônimo",
+            "Acredite no poder dos seus sonhos. - Anônimo",
+            "O maior obstáculo para o sucesso é o medo do fracasso. - Anônimo",
+            "Não se contente com pouco. Busque o melhor. - Anônimo",
+            "As pessoas de sucesso têm uma visão clara de onde querem chegar. - Anônimo",
+            "A diferença entre quem você é e quem você quer ser está no que você faz. - Anônimo",
+            "O sucesso não é final, o fracasso não é fatal: é a coragem de continuar que conta. - Winston Churchill",
+            "Faça mais do que o esperado. - Anônimo",
+            "O sucesso é a soma de pequenos esforços repetidos dia após dia. - Robert Collier"
+        ];
 
-  <!-- Frase -->
-  <div class="quote">"O sucesso é ir de fracasso em fracasso sem perder entusiasmo. - Winston Churchill"</div>
+        function showRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.querySelector('.quote').textContent = quotes[randomIndex];
+        }
 
-  <script>
-    const quotes = [
-      "O sucesso é ir de fracasso em fracasso sem perder entusiasmo. - Winston Churchill",
-      "Acredite que você pode, assim você já está no meio do caminho. - Theodore Roosevelt",
-      "Tudo o que você pode imaginar é real. - Pablo Picasso",
-      "Não espere. O tempo nunca será justo. - Napoleon Hill",
-      "Você é mais forte do que pensa. - Anônimo",
-      "Não importa o quão devagar você vá, desde que não pare. - Confúcio",
-      "O único lugar onde o sucesso vem antes do trabalho é no dicionário. - Vidal Sassoon",
-      "Acredite em si próprio e todo o resto virá naturalmente. - Elissa Landi",
-      "O maior erro que você pode cometer na vida é ter medo de cometer erros. - Elbert Hubbard",
-      "O que você faz hoje pode melhorar todos os seus amanhãs. - Ralph Marston",
-      "O futuro pertence àqueles que acreditam na beleza de seus sonhos. - Eleanor Roosevelt",
-      "O segredo para ir para frente é começar. - Mark Twain",
-      "A única maneira de fazer um excelente trabalho é amar o que você faz. - Steve Jobs",
-      "Sucesso é a soma de pequenos esforços repetidos dia após dia. - Robert Collier",
-      "A felicidade não é algo pronto. Ela vem de suas próprias ações. - Dalai Lama",
-      "A única limitação que você tem é a que você coloca em si mesmo. - Jim Kwik",
-      "Acredite em você mesmo e todo o resto se encaixará. - Elissa Landi",
-      "Vá com confiança na direção dos seus sonhos. - Henry David Thoreau",
-      "Nada pode impedir uma pessoa que tem a determinação de alcançar seus objetivos. - Og Mandino",
-      "A adversidade faz parte da vida, mas também pode trazer as maiores lições. - Anônimo",
-      "A persistência é o caminho do êxito. - Charles Chaplin",
-      "Não espere por uma oportunidade extraordinária. Aproveite as ocasiões comuns e as faça grandes. - Orison Swett Marden",
-      "O maior erro que você pode cometer é ter medo de errar. - Elbert Hubbard",
-      "Sonhe grande, comece pequeno e vá longe. - Anônimo",
-      "O momento certo é agora. - Anônimo",
-      "O único modo de fazer um excelente trabalho é amar o que você faz. - Steve Jobs",
-      "Quando tudo parecer estar indo contra você, lembre-se de que o avião decola contra o vento. - Henry Ford",
-      "Acredite que você pode, e você já está no meio do caminho. - Theodore Roosevelt",
-      "O sucesso não é final, o fracasso não é fatal: é a coragem de continuar que conta. - Winston Churchill",
-      "Não tenha medo de desistir do bom para buscar o ótimo. - John D. Rockefeller",
-      "Cada conquista começa com a decisão de tentar. - Anônimo",
-      "A chave para o sucesso é começar antes de se sentir pronto. - Marie Forleo",
-      "A diferença entre quem você é e quem você quer ser está no que você faz. - Anônimo",
-      "Quando você acredita em si mesmo, as possibilidades são infinitas. - Anônimo",
-      "A única maneira de alcançar o impossível é acreditar que é possível. - Charles Kingsleigh",
-      "O maior obstáculo para o sucesso é o medo do fracasso. - Sven Goran Eriksson",
-      "Fazer o que você ama é liberdade. Amar o que você faz é felicidade. - Frank Tyger",
-      "Dificuldades preparam pessoas comuns para destinos extraordinários. - C.S. Lewis",
-      "Não se preocupe com falhas, preocupe-se com as oportunidades que você perde quando não tenta. - Jack Canfield",
-      "Acredite em suas possibilidades, mesmo quando elas parecerem pequenas. - Anônimo",
-      "O sucesso não vem do que você faz ocasionalmente, mas do que você faz consistentemente. - Marie Forleo",
-      "Você nunca é velho demais para estabelecer um novo objetivo ou sonhar um novo sonho. - C.S. Lewis",
-      "Grandes coisas nunca vêm de zonas de conforto. - Anônimo",
-      "A persistência é a chave para superar qualquer obstáculo. - Anônimo",
-      "Nunca deixe que os medos do que você não pode fazer interfiram no que você pode fazer. - John Wooden",
-      "Tudo o que você sempre quis está do outro lado do medo. - George Addair",
-      "O fracasso é apenas o sucesso tentando dar um passo à frente. - Anônimo",
-      "Cada dia é uma nova chance para mudar a sua vida. - Anônimo",
-      "O futuro depende do que fazemos no presente. - Mahatma Gandhi",
-      "A coragem não é a ausência de medo, mas a decisão de que algo é mais importante do que o medo. - Ambrose Redmoon",
-      "Para cada problema, há uma solução, e ela está dentro de você. - Anônimo",
-      "A vida começa onde termina sua zona de conforto. - Neale Donald Walsch",
-      "A forma de começar é parar de falar e começar a fazer. - Walt Disney",
-      "O sucesso está no esforço contínuo. - Anônimo",
-      "Sonhe grande. Comece pequeno. Aja agora. - Anônimo",
-      "A maior conquista é ser fiel a si mesmo. - Anônimo",
-      "A única coisa que impede você de alcançar seus sonhos é a sua vontade. - Anônimo",
-      "Nada é impossível para aquele que acredita. - Audrey Hepburn",
-      "Você só falha quando desiste de tentar. - Anônimo",
-      "Quando você parar de correr atrás do que não é para você, a vida começará a te dar o que você merece. - Anônimo",
-      "Você não precisa ser ótimo para começar, mas precisa começar para ser ótimo. - Zig Ziglar",
-      "Não importa a velocidade com que você avança, desde que não pare. - Confúcio",
-      "Desafios são o que tornam a vida interessante; superá-los é o que torna a vida significativa. - Joshua J. Marine",
-      "O fracasso não é uma opção. - Anônimo",
-      "A vida é 10% o que acontece com você e 90% como você reage a isso. - Charles R. Swindoll",
-      "A única maneira de prever o futuro é criá-lo. - Peter Drucker",
-      "O melhor ainda está por vir. - Anônimo",
-      "A única limitação é aquela que você coloca em si mesmo. - Anônimo",
-      "O que você pensa, você se torna. - Buddha",
-      "Não importa quantas vezes você falhe, você sempre terá uma nova chance para tentar novamente. - Anônimo",
-      "Se você quer ser feliz, seja. - Leo Tolstoy",
-      "Você é capaz de fazer qualquer coisa que colocar em sua mente. - Anônimo",
-      "A vida é uma aventura ousada ou não é nada. - Helen Keller",
-      "Grandes coisas nunca vêm de zonas de conforto. - Anônimo",
-      "Vá onde você se sentir mais vivo. - Anônimo",
-      "O que você faz hoje pode melhorar todos os seus amanhãs. - Ralph Marston",
-      "Faça o que você pode, com o que você tem, onde você está. - Theodore Roosevelt",
-      "Viva como se fosse morrer amanhã. Aprenda como se fosse viver para sempre. - Mahatma Gandhi",
-      "Você nunca sabe quão forte é até ser forte é sua única escolha. - Bob Marley",
-      "A felicidade não é algo pronto. Ela vem das suas próprias ações. - Dalai Lama",
-      "Acredite em seus sonhos e eles podem se tornar realidade. - Walt Disney",
-      "A única maneira de alcançar o impossível é acreditar que é possível. - Charles Kingsleigh",
-      "Coragem não é a ausência do medo, mas a capacidade de agir apesar do medo. - John Wayne",
-      "Nada na vida deve ser temido, apenas compreendido. - Marie Curie",
-      "O sucesso é a soma de pequenos esforços repetidos dia após dia. - Robert Collier",
-      "A vida começa onde termina sua zona de conforto. - Neale Donald Walsch",
-      "A vida é curta demais para esperar. - Anônimo"
-    ];
-
-    function showRandomQuote() {
-      const randomIndex = Math.floor(Math.random() * quotes.length);
-      document.querySelector('.quote').textContent = quotes[randomIndex];
-    }
-
-    // Exibe uma frase aleatória ao carregar a página
-    window.onload = showRandomQuote;
-  </script>
+        window.onload = showRandomQuote;
+    </script>
 </body>
 </html>
